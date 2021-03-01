@@ -1,6 +1,39 @@
-.main{
+.main {
   margin-top: .3rem;
   width: 100%;
-  height: 20rem;
+  height: 22rem;
   background-color: blue;
+  background-size: contain;
+  background-image: url("../../assets/images/search.png");
+  display: flex;
+  align-items: flex-end;
+}
+
+.content {
+  height: 80%;
+  width: 50%;
+  background-color: #b7d4fc;
+  margin-left: 10rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tilte {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.actions {
+  margin-top: 2rem;
+  width: 90%;
+  height: 7rem;
+  background-color: blue;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
