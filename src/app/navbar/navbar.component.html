@@ -1,26 +1,27 @@
 <div class="main">
-    <div class="nav-left">
-      <img width="100" height="50"
-           src="./assets/images/wikipedia-wordmark-fr.svg">      <div class="item">
-        <span>Find Jops</span>
-      </div>
-      <div class="item">
-        <span>Company reviews</span>
-      </div>
-      <div class="item">
-        <span>Find salaries</span>
-      </div>
+  <div class="nav-left">
+    <img width="100" height="50"
+         src="./assets/images/wikipedia-wordmark-fr.svg">
+    <div (click)="ourMethode('Hello Angular')" class="item">
+      <span>{{title}}</span>
     </div>
-    <div class="nav-right">
-      <div class="item">
-        <span>Update your resume</span>
-      </div>
-      <div class="item selected">
-        <span>Sign in</span>
-      </div>
-      <div class="v-bar"></div>
-      <div class="item">
-        <span>Employers/Post job</span>
-      </div>
+    <div class="item">
+      <span>Company reviews</span>
     </div>
+    <div class="item">
+      <span>Find salaries</span>
+    </div>
+  </div>
+  <div class="nav-right">
+    <div class="item">
+      <span>Update your resume</span>
+    </div>
+    <div class="item selected">
+      <span>Sign in</span>
+    </div>
+    <div class="v-bar"></div>
+    <div class="item">
+      <span>Employers/Post job</span>
+    </div>
+  </div>
 </div>
