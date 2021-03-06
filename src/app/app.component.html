@@ -1,2 +1,8 @@
-<app-navbar></app-navbar>
+<app-navbar (sageEvent)="recevoir($event)" [message]="title"></app-navbar>
 <app-searchbar></app-searchbar>
+
+<h1 (click)="change()">Inputs {{test2}} </h1>
+
+<input [(ngModel)]="title
+" placeholder="Entrer votre nom ">
+<h2>{{title}}</h2>
