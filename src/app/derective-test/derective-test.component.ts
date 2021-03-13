@@ -27,6 +27,7 @@ export class DerectiveTestComponent implements OnInit {
     }
   ];
   styles = Styles;
+  cardStyle = Styles.main;
   check = (code) => {
     if (code === 'DZ') {
       this.colors = 'blue';
@@ -54,5 +55,8 @@ export class DerectiveTestComponent implements OnInit {
         alert('Default');
         break;
     }
+  };
+  cchangeColor = () => {
+    this.cardStyle = Styles.main2;
   };
 }

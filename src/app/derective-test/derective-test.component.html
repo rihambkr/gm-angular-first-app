@@ -1,8 +1,8 @@
 <div class="all">
   <h1>Liste perssones :</h1>
-  <button (click)="testSwitch('')" mat-raised-button color="primary">Primary</button>
+  <button (click)="cchangeColor()" mat-raised-button color="primary">Primary</button>
   <div class="main">
-    <mat-card [ngStyle]="styles.main" class="card" *ngFor="let perssone of personnes">
+    <mat-card [ngClass]="{card:true, selected: perssone.codeCountry==='DZ'}" *ngFor="let perssone of personnes">
       <h3 *ngIf="check(perssone.codeCountry)" [style.color]="colors">Nom : {{perssone.name}}</h3>
       <h3>Code Pays Algérie : {{perssone.codeCountry}}</h3>
     </mat-card>
