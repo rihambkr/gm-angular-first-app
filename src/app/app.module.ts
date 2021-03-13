@@ -11,6 +11,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {DerectiveTestComponent} from './derective-test/derective-test.component';
 import {MatButtonModule} from '@angular/material/button';
+import { DefaultPipe } from './default.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { EnfantComponent } from './enfant/enfant.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import {MatButtonModule} from '@angular/material/button';
     NavbarComponent,
     SearchbarComponent,
     LoginComponent,
-    DerectiveTestComponent
+    DerectiveTestComponent,
+    DefaultPipe,
+    ParentComponent,
+    EnfantComponent
   ],
   imports: [
     BrowserModule,

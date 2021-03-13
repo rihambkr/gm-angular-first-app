@@ -10,6 +10,8 @@ export class DerectiveTestComponent implements OnInit {
   date = new Date();
   colors: string;
   code = 'DZ';
+  defaultImg = 'https://static.lpnt.fr/images/2020/04/24/20278755lpw-20278769-article-geai-des-chenes-jpg_7068936_660x281.jpg';
+  url = '';
   personnes = [
     {
       name: 'Perssone One',
