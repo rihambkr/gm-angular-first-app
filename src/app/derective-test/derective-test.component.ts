@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import Styles from '../styles/style';
 
 @Component({
   selector: 'app-derective-test',
@@ -25,7 +26,7 @@ export class DerectiveTestComponent implements OnInit {
       codeCountry: ''
     }
   ];
-
+  styles = Styles;
   check = (code) => {
     if (code === 'DZ') {
       this.colors = 'blue';
