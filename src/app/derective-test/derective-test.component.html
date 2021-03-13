@@ -1,0 +1,12 @@
+<h1>Liste perssones :</h1>
+<button (click)="testSwitch('')" mat-raised-button color="primary">Primary</button>
+<div class="main">
+  <mat-card class="card" *ngFor="let perssone of personnes"
+            [ngSwitch]="perssone.codeCountry">
+    <h3 *ngIf="check(perssone.codeCountry)" [style.color]="colors">Nom : {{perssone.name}}</h3>
+    <h3 *ngSwitchCase="'DZ'">Code Pays Algérie : {{perssone.codeCountry}}</h3>
+    <h3 *ngSwitchCase="'TN'">Code Pays Tunisie : {{perssone.codeCountry}}</h3>
+    <h3 *ngSwitchCase="'CA'">Code Pays Canada : {{perssone.codeCountry}}</h3>
+    <h3 *ngSwitchDefault>Code Pays Moritanie : {{perssone.codeCountry}}</h3>
+  </mat-card>
+</div>

@@ -5,16 +5,28 @@ import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {SearchbarComponent} from './searchbar/searchbar.component';
 import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {LoginComponent} from './login/login.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {DerectiveTestComponent} from './derective-test/derective-test.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    LoginComponent,
+    DerectiveTestComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
