@@ -1,31 +1,27 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
-import {NavbarComponent} from './navbar/navbar.component';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
-  title = 'firstappangular';
-  test: string;
-  show = false;
-  test2: string;
+export class AppComponent implements OnInit {
+  colors = 'black';
+  defaultColors = 'black';
 
-  @ViewChild(NavbarComponent) navbar;
+  constructor() {
+  }
 
-  change = () => {
-    this.show = !this.show;
-  };
+  ngOnInit = () => {
+  }
 
-  recevoir = ($event) => {
-    console.log('$event');
-    console.log($event);
-    this.test2 = $event;
-  };
+  onBlurEvent = (newColor) => {
+    console.log(newColor);
+    this.colors = newColor;
+  }
 
-  ngAfterViewInit(): void {
-    this.test = this.navbar.title;
-
+// methode set color default
+  defaultColor = () => {
+    this.colors = this.defaultColors;
   }
 }

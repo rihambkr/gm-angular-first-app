@@ -1,8 +1,17 @@
-<app-navbar (sageEvent)="recevoir($event)" [message]="title"></app-navbar>
-<app-searchbar></app-searchbar>
+<div class="main">
+  <div class="section">
+    <div class="input_dev">
+      <input #color type="text" (blur)="onBlurEvent(color.value)" [value]="colors">
 
-<h1 (click)="change()">Inputs {{test2}} </h1>
+    </div>
+    <div class="pint-div" [style.background-color]="colors">
 
-<input [(ngModel)]="title
-" placeholder="Entrer votre nom ">
-<h2>{{title}}</h2>
+    </div>
+
+
+    <div class="btn-div">
+      <button class="btn btn-primary" (click)="defaultColor()">Défault Color</button>
+    </div>
+
+  </div>
+</div>
