@@ -4,7 +4,9 @@
   <div class="main">
     <mat-card [ngClass]="['card', perssone.codeCountry =='DZ'?'selected':'']" *ngFor="let perssone of personnes">
       <h3 *ngIf="check(perssone.codeCountry)" [style.color]="colors">Nom : {{perssone.name}}</h3>
-      <h3>Code Pays Algérie : {{perssone.codeCountry}}</h3>
+      <h3>Code Pays Algérie : {{perssone.codeCountry | lowercase}}</h3>
+      <h3>Date : {{date | date:'mediumTime'}}</h3>
+      <h3>Currency : {{ 1234.56 | currency:'USD' }}</h3>
     </mat-card>
   </div>
 </div>

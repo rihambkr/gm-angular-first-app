@@ -7,6 +7,7 @@ import Styles from '../styles/style';
   styleUrls: ['./derective-test.component.css']
 })
 export class DerectiveTestComponent implements OnInit {
+  date = new Date();
   colors: string;
   code = 'DZ';
   personnes = [
@@ -41,6 +42,7 @@ export class DerectiveTestComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.date);
   }
 
   testSwitch = (value) => {
