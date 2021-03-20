@@ -1,5 +1,9 @@
 <div [ngClass]="['main']">
   <h1>Enfant</h1>
   <h3>{{message}}</h3>
-  <button (click)=" changeServiceMessage()" mat-raised-button color="primary">Envoyer</button>
+  <input [(ngModel)]="message" (change)="changeServiceMessage()" placeholder="message">
+  <button (click)="changeTab()" mat-raised-button color="primary">Envoyer</button>
+
+  <span style="display: block; text-align: center" *ngFor="let user of tab">nom: {{user.nom}}
+    email : {{user.email}}</span>
 </div>

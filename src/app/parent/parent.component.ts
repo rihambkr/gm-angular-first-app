@@ -11,13 +11,17 @@ export class ParentComponent implements AfterViewInit {
   @ViewChild(EnfantComponent) ch;
   message: string;
   message3: string;
+  tab = [];
 
   constructor(private common: CommonService) {
+    this.common.subject.asObservable().subscribe((message: string) => {
+      this.message = message;
+    });
   }
 
   ngAfterViewInit(): void {
-    this.common.subject.asObservable().subscribe((message: string) => {
-      this.message = message;
+    this.common.bsubject.asObservable().subscribe(tab => {
+      this.tab = tab;
     });
   }
 

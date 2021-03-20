@@ -2,5 +2,8 @@
   <h1>Parent</h1>
   <h3>{{message}}</h3>
   <h3>{{message3}}</h3>
+  <span style="display: block; text-align: center" *ngFor="let user of tab">nom: {{user.nom}}
+    email : {{user.email}}</span>
   <app-enfant (eventMessage)="recevoirMessage($event)" [message]="'Hello from parent'"></app-enfant>
+
 </div>
