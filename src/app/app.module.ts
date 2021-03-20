@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { DefaultPipe } from './default.pipe';
 import { ParentComponent } from './parent/parent.component';
 import { EnfantComponent } from './enfant/enfant.component';
+import { DerictiveNewTestComponent } from './derictive-new-test/derictive-new-test.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EnfantComponent } from './enfant/enfant.component';
     DerectiveTestComponent,
     DefaultPipe,
     ParentComponent,
-    EnfantComponent
+    EnfantComponent,
+    DerictiveNewTestComponent
   ],
   imports: [
     BrowserModule,

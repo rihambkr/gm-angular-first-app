@@ -1,4 +1,9 @@
 const Styles = {
+  title: {
+    backgroundColor: 'red',
+    fontSize: '2rem'
+  },
+  param: {},
   main: {
     color: 'green',
     backgroundColor: 'yellow',
