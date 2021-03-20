@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {CommonService} from '../services/common.service';
 
 @Component({
   selector: 'app-enfant',
@@ -14,14 +15,20 @@ export class EnfantComponent implements OnInit {
 
   @Output() eventMessage = new EventEmitter<string>();
 
-  constructor() {
+  constructor(private  common: CommonService) {
   }
 
   ngOnInit(): void {
+    this.common.subject.asObservable().subscribe((message: string) => {
+      this.message = message;
+    });
   }
 
   send = () => {
     this.eventMessage.emit(this.message3);
+  };
+  changeServiceMessage = () => {
+    this.common.subject.next('New Service Message !');
   };
 
 }

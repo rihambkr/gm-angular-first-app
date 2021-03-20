@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {EnfantComponent} from '../enfant/enfant.component';
+import {CommonService} from '../services/common.service';
 
 @Component({
   selector: 'app-parent',
@@ -11,11 +12,13 @@ export class ParentComponent implements AfterViewInit {
   message: string;
   message3: string;
 
-  constructor() {
+  constructor(private common: CommonService) {
   }
 
   ngAfterViewInit(): void {
-    this.message = this.ch.message2;
+    this.common.subject.asObservable().subscribe((message: string) => {
+      this.message = message;
+    });
   }
 
   recevoirMessage = ($event) => {

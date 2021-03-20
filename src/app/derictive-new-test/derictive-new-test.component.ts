@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import Styles from '../styles/style';
+import {CommonService} from '../services/common.service';
 
 @Component({
   selector: 'app-derictive-new-test',
@@ -7,6 +8,7 @@ import Styles from '../styles/style';
   styleUrls: ['./derictive-new-test.component.css']
 })
 export class DerictiveNewTestComponent implements OnInit {
+  date = new Date();
   show = true;
   style = Styles;
   tab = [
@@ -24,7 +26,7 @@ export class DerictiveNewTestComponent implements OnInit {
     },
   ];
 
-  constructor() {
+  constructor(private common: CommonService) {
   }
 
   ngOnInit(): void {
@@ -34,7 +36,7 @@ export class DerictiveNewTestComponent implements OnInit {
     this.style.title.fontSize = '1rem';
   };
   switch = () => {
-    this.show = !this.show;
+    this.show = this.common.switch(this.show);
   };
 
 }

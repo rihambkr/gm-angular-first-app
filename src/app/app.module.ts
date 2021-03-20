@@ -15,6 +15,7 @@ import { DefaultPipe } from './default.pipe';
 import { ParentComponent } from './parent/parent.component';
 import { EnfantComponent } from './enfant/enfant.component';
 import { DerictiveNewTestComponent } from './derictive-new-test/derictive-new-test.component';
+import { PipetestPipe } from './pipetest.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DerictiveNewTestComponent } from './derictive-new-test/derictive-new-te
     DefaultPipe,
     ParentComponent,
     EnfantComponent,
-    DerictiveNewTestComponent
+    DerictiveNewTestComponent,
+    PipetestPipe
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,10 @@
 <h1 *ngIf="show===true" style="text-align: center">Test des derictive </h1>
 <button mat-raised-button color="primary" (click)="switch()">Hide</button>
 
+<h1>Now Date : {{date | date:'short'}}</h1>
 <div [ngClass]="{main:show===true }">
 <span *ngFor="let user of tab">
       Nom : {{user.name}} email : {{user.email}}  </span>
 </div>
+
 
