@@ -8,7 +8,7 @@
   </div>
   <app-add-note *ngIf="isAdd===false"></app-add-note>
   <div *ngIf="isAdd===true" class="cards">
-    <app-card-keep *ngFor="let keep of keeps"></app-card-keep>
+    <app-card-keep *ngFor="let keep of keeps" [keep]="keep"></app-card-keep>
 
   </div>
 

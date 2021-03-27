@@ -6,7 +6,8 @@ import {Keep} from '../models/keep';
   providedIn: 'root'
 })
 export class KeepService {
-  tab = [];
+  k = new Keep('Keep de test', 'Keep content ....');
+  tab = [this.k];
   keep = new BehaviorSubject<Keep[]>(this.tab);
 
   constructor() {

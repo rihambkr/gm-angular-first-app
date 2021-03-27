@@ -8,11 +8,12 @@ import {KeepService} from '../../services/keep.service';
   styleUrls: ['./google-keep.component.css']
 })
 export class GoogleKeepComponent implements OnInit {
-  isAdd = false;
+  isAdd = true;
   keeps: Keep[];
 
   constructor(private service: KeepService) {
     this.service.getKeep().subscribe(res => {
+      console.log(res);
       this.keeps = res;
     }, (error: any) => {
       console.log('ERROR : ' + error);

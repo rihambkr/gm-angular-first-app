@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Keep} from '../../../models/keep';
 
 @Component({
   selector: 'app-card-keep',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-keep.component.css']
 })
 export class CardKeepComponent implements OnInit {
+  @Input() keep: Keep;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
