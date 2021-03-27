@@ -7,13 +7,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { GoogleKeepComponent } from './modules/google-keep/google-keep.component';
+import {GoogleKeepComponent} from './modules/google-keep/google-keep.component';
+import {MatIconModule} from '@angular/material/icon';
+import { CardKeepComponent } from './modules/google-keep/card-keep/card-keep.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    GoogleKeepComponent
+    GoogleKeepComponent,
+    CardKeepComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,8 @@ import { GoogleKeepComponent } from './modules/google-keep/google-keep.component
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
