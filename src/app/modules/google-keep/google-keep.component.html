@@ -2,7 +2,8 @@
   <div class="nav">
     <span>Our keep</span>
     <button (click)="revert()" mat-fab color="primary" aria-label="Example icon button with a delete icon">
-      <mat-icon>add</mat-icon>
+      <mat-icon *ngIf="isAdd">add</mat-icon>
+      <mat-icon *ngIf="!isAdd">save</mat-icon>
     </button>
   </div>
   <app-add-note *ngIf="isAdd===false"></app-add-note>
