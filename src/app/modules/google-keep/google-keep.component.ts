@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-google-keep',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./google-keep.component.css']
 })
 export class GoogleKeepComponent implements OnInit {
+  isAdd = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  revert = () => {
+    this.isAdd = !this.isAdd;
+  };
 }
