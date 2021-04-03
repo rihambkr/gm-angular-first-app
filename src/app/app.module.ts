@@ -12,6 +12,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {CardKeepComponent} from './modules/google-keep/card-keep/card-keep.component';
 import {AddNoteComponent} from './modules/google-keep/add-note/add-note.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {RoutingModule} from './routing/routing.module';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -30,7 +32,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RoutingModule,
+    RouterModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
