@@ -16,4 +16,8 @@ export class KeepService {
   getKeep = (): Observable<Keep[]> => {
     return this.keep.asObservable();
   };
+
+  addKeep = (keeps: Keep[]) => {
+    this.keep.next(keeps);
+  };
 }

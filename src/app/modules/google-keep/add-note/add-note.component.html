@@ -4,12 +4,13 @@
     <div class="inputs">
       <mat-form-field class="input" appearance="fill">
         <mat-label>Titre</mat-label>
-        <input matInput>
+        <input [formControl]="title" matInput>
       </mat-form-field>
       <mat-form-field class="input" appearance="fill">
         <mat-label>Contenu</mat-label>
-        <textarea rows="6" matInput></textarea>
+        <textarea [formControl]="content" rows="6" matInput></textarea>
       </mat-form-field>
+      <button (click)="addNote()" mat-flat-button color="primarys">Ajouter</button>
     </div>
 
   </mat-card>
