@@ -12,6 +12,10 @@ const routes: Routes = [
   },
   {path: 'keeps', component: GoogleKeepComponent},
   {path: 'add-keep', component: AddNoteComponent},
+  {
+    path: '',
+    loadChildren: () => import('../modules/our-keep/our-keep.module').then(m => m.OurKeepModule),
+  },
   {path: '**', redirectTo: '/keeps'}
 ];
 
