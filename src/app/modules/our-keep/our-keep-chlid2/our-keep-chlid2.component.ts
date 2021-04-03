@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-our-keep-chlid2',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurKeepChlid2Component implements OnInit {
 
-  constructor() { }
+  constructor(private  router: Router) {
+  }
 
   ngOnInit(): void {
   }
+
+  navigate = () => {
+    this.router.navigate(['/client/child1', {name: 'Walid'}]);
+  };
 
 }
