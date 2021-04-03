@@ -26,6 +26,7 @@ export class AddNoteComponent implements OnInit {
     const keep = new Keep(this.title.value, this.content.value);
     this.keeps.push(keep);
     this.service.keep.next(this.keeps);
+    
   };
 
 }
