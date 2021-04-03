@@ -1,7 +1,8 @@
 <mat-card class="main">
   <div class="head">
     <span>{{keep.title}}</span>
-    <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon">
+    <button (click)="remove(keep.title)" mat-mini-fab color="warn"
+            aria-label="Example icon button with a plus one icon">
       <mat-icon>delete</mat-icon>
     </button>
   </div>
